@@ -1,5 +1,8 @@
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.Highlighter;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -10,57 +13,57 @@ import java.util.Timer;
 
 
 public class WPM implements KeyListener {
+
+
+    /***The GUI - define the look and feel type {javax.swing.plat.nimbus.NimbuslookAndfell}
+     */
+    private static final String NIMBUS = "Nimbus"; // NON-NLS
+
+
     //Total word count per line. Customizable (e.g 15, 10, 20, ...) must be WORDCOUNTPERLINE > 0.
     static final int WORDCOUNTPERLINE = 12;
     //Test duration.
     static  int duration = 59;
     static CalculationThread CThread = new CalculationThread();
     static boolean isTestActive = false;
-
+    //words of the test
     static ArrayList<String> wordsFromFile = new ArrayList<>();
     static List words;
     static int lineCounter = 0, latestWordIndex = 0;
-
     static int currentWordIndex = 0;
     static String typedWord = null;
-
+                //all the typed words,  //the correct words      //the wrong words
     static int allTypedCharacterCount=0, correctCharacterCount = 0, wrongCharacterCount = 0;
-
     static boolean startControl = false;
-
     static CalculationThread thread = new CalculationThread();
     static int[] threadDatas = new int[3];
-
-    //Colors
+    // shell Colors
     static final String GREEN = "\033[0;32m";
     static final String YELLOW = "\033[0;33m";
     static final String RED = "\033[0;31m";
-
     static final String BLUE_BACKGROUND = "\033[44m";
+    //
+
+//    //HIghlight colors
+//static final Highlighter.HighlightPainter GREEN = new DefaultHighlighter.DefaultHighlightPainter(Color.GREEN);
+//static final Highlighter.HighlightPainter YELLOW = new DefaultHighlighter.DefaultHighlightPainter(Color.yellow);
+//static final Highlighter.HighlightPainter RED = new DefaultHighlighter.DefaultHighlightPainter(Color.RED);
+//static final Highlighter.HighlightPainter BLUE_BACKGROUND = new DefaultHighlighter.DefaultHighlightPainter(Color.CYAN);
+//    //
 
     public static void main(String[] args) throws IOException {
-        JFrame jFrame = new JFrame("WPM Typing Scanner");
-        JLabel label;
-        Border border;
-
-        jFrame.setSize(300,300);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.setVisible(true);
-        jFrame.addKeyListener(new WPM());
-
-        label  = new JLabel("Focus here while typing.", JLabel.CENTER);
-        label.setFont(new Font(label.getName(), Font.PLAIN, 20));
-
-        border = BorderFactory.createLineBorder(Color.GREEN, 5);
-
-        label.setBorder(border);
-        jFrame.add(label);
-
-        cleanScreen();
+        trySetNimbus();
+        createAndShowGUI();
+        GUI();
         welcome();
     }
 
+
+
+
+
     // Listening methods.
+//    TODO 1-1
     public void keyPressed(KeyEvent e) {
        char character = e.getKeyChar();
 
@@ -100,7 +103,7 @@ public class WPM implements KeyListener {
 
                test(currentWordIndex, typedWord);
             }
-
+//TODO: the count of the typed values
            threadDatas[0] = correctCharacterCount;
            threadDatas[1] = wrongCharacterCount;
            threadDatas[2] = allTypedCharacterCount;
@@ -110,33 +113,18 @@ public class WPM implements KeyListener {
     public void keyTyped(KeyEvent e) {}
 
 
-    private static void welcome() {
-        System.out.println(
-                cleanAnsiAndSetColor("────────────────────────────────────────────────────────────────\n", YELLOW)+
-                "        ╔╗   ╔╗                            ╔╗      ╔╗   ╔╗\n" +
-                "        ║║  ╔╝╚╗                           ║║      ║║  ╔╝╚╗\n" +
-                "╔═╦══╦══╣║  ╚╗╔╬╦╗╔╦══╗ ╔╗╔╗╔╦══╦╗╔╗ ╔══╦══╣║╔══╦╗╔╣║╔═╩╗╔╬══╦═╗\n" +
-                "║╔╣║═╣╔╗║║   ║║╠╣╚╝║║═╣ ║╚╝╚╝║╔╗║╚╝║ ║╔═╣╔╗║║║╔═╣║║║║║╔╗║║║╔╗║╔╝\n" +
-                "║║║║═╣╔╗║╚╗  ║╚╣║║║║║═╣ ╚╗╔╗╔╣╚╝║║║║ ║╚═╣╔╗║╚╣╚═╣╚╝║╚╣╔╗║╚╣╚╝║║\n" +
-                "╚╝╚══╩╝╚╩═╝  ╚═╩╩╩╩╩══╝  ╚╝╚╝║╔═╩╩╩╝ ╚══╩╝╚╩═╩══╩══╩═╩╝╚╩═╩══╩╝\n" +
-                "                             ║║\n" +
-                "                             ╚╝ by axd99\n"+
-                cleanAnsiAndSetColor("────────────────────────────────────────────────────────────────", YELLOW));
-        System.out.println(cleanAnsiAndSetColor("Always stay focused on the frame for typing.\n", YELLOW));
-        System.out.println("Press \"Enter\" to start.");
-    }
-
+    //Main test method.
+    //TODO 1-2
     static void countDown() {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             int count = 3;
 
             public void run() {
-                cleanScreen();
+                //cleanScreen();
 
                 if (count == 0) {
                     timer.cancel();
-
                     isTestActive = true;
                     test(0, null);
 
@@ -144,32 +132,34 @@ public class WPM implements KeyListener {
                     CalculationThread.thread = new Thread(CThread);
                     CalculationThread.thread.start();
                 } else
-                    System.out.println(cleanAnsiAndSetColor("─────────────── ", YELLOW) + count + cleanAnsiAndSetColor(" ───────────────", YELLOW));
-
+//                    System.out.println(cleanAnsiAndSetColor("─────────────── ", YELLOW) + count + cleanAnsiAndSetColor(" ───────────────", YELLOW));
+                CalculationThread.x_view.labelNotice.setText(String.valueOf(count));
                 count--;
             }
         }, 0, 1000);
     }
 
-    //Main test method.
+    //TODO 1-3
     static void test(int currentWordIndex, String typedWord) {
-       if(isTestActive){
-           if(typedWord != null || startControl){
-               startControl = true;
-               for(int i=3; i < 7; i++){
-                   System.out.print(String.format("\033[%dA", i));
-                   System.out.print("\033[2K");
-               }
-           }
+        if(isTestActive){
+            if(typedWord != null || startControl){
+                startControl = true;
+                for(int i=3; i < 7; i++){
+                    System.out.print(String.format("\033[%dA", i));
+                    System.out.print("\033[2K");
+                }
+            }
 
-           printWords(currentWordIndex, typedWord);
-           System.out.println("\nTyped: " + (typedWord == null ? "" : typedWord));
+            printWords(currentWordIndex, typedWord);
+            System.out.println("\nTyped: " + (typedWord == null ? "" : typedWord));
 
-           System.out.print("────────────────────────────────────────\n\n");
-       }
+            System.out.print("────────────────────────────────────────\n\n");
+        }
     }
+
+    //TODO 1 - 4
     //Word coloring and geting method.
-     static void printWords(int currentWordIndex, String typedWord){
+    static void printWords(int currentWordIndex, String typedWord){
         //New line
         if(currentWordIndex == 0 && typedWord == null){
             lineCounter += WORDCOUNTPERLINE;
@@ -207,12 +197,16 @@ public class WPM implements KeyListener {
 
         String showingWords= words.toString().replace(",", "");
         System.out.println(showingWords.substring(1, showingWords.length() - 1));
+//        CalculationThread.x_view.textAreaExampleText.setText(showingWords.substring(1,showingWords.length()-1));
     }
 
+
+
+//TODO read the word to display
     static ArrayList<String> readWordsFromFile(int lineCounter){
         if(wordsFromFile.size() == 0){
             try {
-                File file = new File("words.txt");
+                File file = new File("ProjectFiles/src/words.txt");
                 Scanner words = new Scanner(file);
 
                 while (words.hasNext()) {
@@ -221,6 +215,7 @@ public class WPM implements KeyListener {
 
             } catch (FileNotFoundException e) {
                 System.out.println("An error occurred.");
+                System.out.println(e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -236,6 +231,52 @@ public class WPM implements KeyListener {
         return words;
     }
 
+
+
+/*** The Console GUI
+ */
+//welcome console
+private static void welcome() {
+//    System.out.println(cleanAnsiAndSetColor("Always stay focused on the frame for typing.\n", YELLOW));
+    CalculationThread.x_view.labelNotice.setText("Always stay focused on the frame for typing");
+    CalculationThread.x_view.labelNotice.setText("Press \"Enter\" to start.");
+//    System.out.println("Press \"Enter\" to start.");
+}
+
+//the GUI
+ public static void GUI()
+{
+        JFrame jFrame = new JFrame("WPM Typing Scanner");
+        JLabel label;
+        Border border;
+
+        jFrame.setSize(300,300);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.setVisible(true);
+        jFrame.addKeyListener(new WPM());
+
+        label  = new JLabel("Focus here while typing.", JLabel.CENTER);
+        label.setFont(new Font(label.getName(), Font.PLAIN, 20));
+
+        border = BorderFactory.createLineBorder(Color.GREEN, 5);
+
+        label.setBorder(border);
+        jFrame.add(label);
+
+        //cleanScreen();
+    }
+
+
+//static void cleanScreen() {
+//        System.out.print("\033[H\033[2J");
+//        System.out.flush();
+//    }
+
+    /*** COLORISE THE TEXT
+     * @param word
+     * @param color
+     * @return
+     */
     static String cleanAnsiAndSetColor(String word, String color){
         if(color.equals(""))
             return word.replaceAll("\u001B\\[[\\d;]*[^\\d;]","");
@@ -243,71 +284,90 @@ public class WPM implements KeyListener {
             return color + word.replaceAll("\u001B\\[[\\d;]*[^\\d;]","") + "\033[0m";
     }
 
-    static void cleanScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+    /*** Highlite colorise the text
+     * @param word
+     * @param color
+     * @return
+     */
+//    public static String cleanAnsiAndSetColor(String word, Highlighter.HighlightPainter color){
+//        try {
+//        if (color.equals(null))
+//        {
+//            //the highlight of the text
+//            Highlighter high =  CalculationThread.x_view.textAreaExampleText.getHighlighter();
+//            high.removeAllHighlights();
+//
+//           high.addHighlight(0,word.length(), DefaultHighlighter.DefaultPainter);
+//           return "";
+//        } else
+//            {
+//            return "else";
+//            }
+//
+//        }catch (BadLocationException ex)
+//        {
+//            System.out.println(ex.getMessage());
+//        }
+//
+//        return word;
+//    }
+//
+
+    /**
+     * TODO:the GUI
+     */
+    private static void createAndShowGUI() {
+         CalculationThread.x_view = new typingGUI();
+        CalculationThread.x_view.initApp();
+        JFrame x_frame = new JFrame("Let's TEST");
+        x_frame.setContentPane(CalculationThread.x_view.panelTopLevel);
+        x_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        x_frame.pack();
+
+        // Now centering the frame at the screen, resizing if necessary
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension screenSize = tk.getScreenSize();
+        int screenHeight = screenSize.height;
+        int screenWidth = screenSize.width;
+        int height = x_frame.getHeight();
+        int width = x_frame.getWidth();
+        if (height > screenHeight) {
+            x_frame.setSize(width, screenHeight);
+            x_frame.pack();
+            height = screenHeight;
+        }
+        if (width > screenWidth) {
+            x_frame.setSize(screenWidth, height);
+            x_frame.pack();
+            width = screenWidth;
+        }
+        x_frame.setLocation((screenWidth - width) / 2, (screenHeight - height) / 2);
+        x_frame.setVisible(true);
     }
-}
+    public static void trySetNimbus() {
 
-class CalculationThread extends Thread{
-
-    static Thread thread;
-    int aCC=0, cCC=0, wCC=0, grossWPM = 0, netWPM = 0;
-    float accuracy = 0f;
-
-    @Override
-    public void run() {
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            public void run() {
-                cCC = WPM.threadDatas[0];
-                wCC = WPM.threadDatas[1];
-                aCC = WPM.threadDatas[2];
-
-                if(aCC != 0){
-                    grossWPM =Math.round((cCC+wCC) / 5f / ((60 - WPM.duration)/60f));
-                    netWPM = grossWPM - Math.round((wCC / 5f / ((60 - WPM.duration)/60f)));
-                    accuracy = (float) cCC / aCC * 100;
-
+        //the UIManager control a group of controls
+        for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+            if (NIMBUS.equals(info.getName())) {
+                try {
+                    UIManager.setLookAndFeel(info.getClassName());
+                } catch (UnsupportedLookAndFeelException e) {
+                    try {
+                        UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+                    } catch (Exception e1) {
+                        System.err.println(e1.getMessage());
+                        System.exit(1);
+                    }
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                    System.exit(1);
                 }
-
-                System.out.print(String.format("\033[%dA", 1));
-                System.out.print("\033[2K");
-
-                if (WPM.duration == 0) {
-                    timer.cancel();
-                    thread.interrupt();
-                    cleanVariablesAndShowResultScreen(false);
-                }else
-                    System.out.print("Time: "+  WPM.duration + "s | Net WPS: " + netWPM + " | Accuracy: " + String.format("%.2f", accuracy) + "%\n");
-
-                WPM.duration--;
+                break;
             }
-        }, 0, 1000);
+        }
     }
-
-    void cleanVariablesAndShowResultScreen(boolean isEndOfWords){
-        WPM.isTestActive = false;
-        WPM.duration = 59;
-        WPM.lineCounter = 0;
-        WPM.latestWordIndex = 0;
-        WPM.currentWordIndex = 0;
-        WPM.typedWord = null;
-        WPM.allTypedCharacterCount = 0;
-        WPM.correctCharacterCount = 0;
-        WPM.wrongCharacterCount = 0;
-        WPM.startControl = false;
-
-        WPM.cleanScreen();
-
-        System.out.println(WPM.cleanAnsiAndSetColor("───────────────", WPM.YELLOW) + " Results " + WPM.cleanAnsiAndSetColor("─────────────── ", WPM.YELLOW));
-        System.out.println("Net WPM: " + WPM.cleanAnsiAndSetColor(String.valueOf(netWPM), WPM.YELLOW) + " | Gross WPM: " + WPM.cleanAnsiAndSetColor(String.valueOf(grossWPM), WPM.YELLOW));
-        System.out.println("────────");
-        System.out.println("Accuracy: " + WPM.cleanAnsiAndSetColor(String.format("%.2f", accuracy) + "%", WPM.YELLOW));
-        System.out.println("─────────");
-        System.out.println("All entrys: " + aCC + " | Correct: " + WPM.cleanAnsiAndSetColor(String.valueOf(cCC), WPM.GREEN) + " | Wrong: " + WPM.cleanAnsiAndSetColor(String.valueOf(wCC), WPM.RED));
-
-        if(!isEndOfWords)
-            System.out.println("\nPress \"Enter\" for restart.");
-    }
+    /***
+     * END
+     */
 }
+
