@@ -33,8 +33,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="64" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="337" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/jgoodies comm 1.8.0/common/jgoodies-forms-1.8.0.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CheckersAI" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,12 +71,25 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
-          <line>167</line>
-          <option name="timeStamp" value="1" />
+          <line>155</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WordRacer$WPM.ic" NAME="WPM Coverage Results" MODIFIED="1653565243332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
