@@ -56,6 +56,19 @@ public class WPM implements KeyListener {
         createAndShowGUI();
         GUI();
         welcome();
+
+        MessageConsole mc = new MessageConsole(CalculationThread.x_view.textAreaTyping);
+        try {
+
+            mc.redirectOut();
+            mc.redirectErr(Color.YELLOW, null);
+        mc.redirectErr();
+        mc.setMessageLines(100);
+        throw new Exception();
+        }catch (Exception ex)
+        {
+            System.out.println("error mthfucker");
+        }
     }
 
 
@@ -145,8 +158,8 @@ public class WPM implements KeyListener {
             if(typedWord != null || startControl){
                 startControl = true;
                 for(int i=3; i < 7; i++){
-                    System.out.print(String.format("\033[%dA", i));
-                    System.out.print("\033[2K");
+                   // System.out.print(String.format("\033[%dA", i));
+                   // System.out.print("\033[2K");
                 }
             }
 
@@ -198,7 +211,7 @@ public class WPM implements KeyListener {
 
         String showingWords= words.toString().replace(",", "");
         //todo:show text
-        System.out.println(showingWords.substring(1, showingWords.length() - 1));
+       // System.out.println(showingWords.substring(1, showingWords.length() - 1));
 //        CalculationThread.x_view.textAreaExampleText.setText(showingWords.substring(1,showingWords.length()-1));
     }
 
