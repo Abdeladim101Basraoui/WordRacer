@@ -35,19 +35,20 @@ public class typingGUI extends Component{
     //TODO: used to take the top lvl prop
     public  JPanel panelTopLevel;
     public JLabel labelNotice;
+    public JLabel lblTyped;
     //
 
     private static final Object ABORT_KEY = new Object();
 
-    public typingGUI() {
-
-        buttonCancelTest.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-    }
+//    public typingGUI() {
+//
+//        buttonCancelTest.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//            }
+//        });
+//    }
 
     public void initApp() {
         // Actions

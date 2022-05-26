@@ -151,9 +151,10 @@ public class WPM implements KeyListener {
             }
 
             printWords(currentWordIndex, typedWord);
-            System.out.println("\nTyped: " + (typedWord == null ? "" : typedWord));
+            CalculationThread.x_view.lblTyped.setText("");
+           CalculationThread.x_view.lblTyped.setText("\nTyped: " + (typedWord == null ? "" : typedWord));
 
-            System.out.print("────────────────────────────────────────\n\n");
+//            System.out.print("────────────────────────────────────────\n\n");
         }
     }
 
@@ -196,6 +197,7 @@ public class WPM implements KeyListener {
         }
 
         String showingWords= words.toString().replace(",", "");
+        //todo:show text
         System.out.println(showingWords.substring(1, showingWords.length() - 1));
 //        CalculationThread.x_view.textAreaExampleText.setText(showingWords.substring(1,showingWords.length()-1));
     }
