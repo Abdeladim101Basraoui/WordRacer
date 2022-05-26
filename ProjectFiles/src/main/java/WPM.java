@@ -83,10 +83,7 @@ public class WPM implements KeyListener {
         createAndShowGUI();
         welcome();
     }
-
-
-    public static void typingProcess(KeyEvent e)
-    {
+    public static void typingProcess(KeyEvent e) {
         char character = e.getKeyChar();
 
         if(character == KeyEvent.VK_ENTER && !isTestActive)
@@ -102,27 +99,23 @@ public class WPM implements KeyListener {
                     test(currentWordIndex = 0, typedWord = null);
                 }
                 else{
-                    // True word control after space
-                    if(cleanAnsiAndSetColor((String) words.get(latestWordIndex),"").equals(typedWord))
+                    if(words.get(latestWordIndex).equals(typedWord))
                         correctCharacterCount += typedWord.length() + 1;
                     else{
-                        words.set(latestWordIndex, cleanAnsiAndSetColor((String) words.get(latestWordIndex), RED));
-                        wrongCharacterCount += cleanAnsiAndSetColor((String) words.get(latestWordIndex),"").length() + 1;
+                       // words.set(latestWordIndex, cleanAnsiAndSetColor((String) words.get(latestWordIndex), RED));
+                        wrongCharacterCount += ((String)words.get(latestWordIndex)).length() + 1;
                     }
 
                     test(currentWordIndex, typedWord = "");
                 }
             }
-
+//TODO importtant
             if(character == KeyEvent.VK_BACK_SPACE && (typedWord == null ? false : typedWord.length() != 0 ? true : false))
                 test(currentWordIndex, typedWord = typedWord.substring(0, typedWord.length() - 1));
-
             if(Character.isAlphabetic(character)){
                 allTypedCharacterCount++;
-
                 typedWord = typedWord == null ? "" : typedWord;
                 typedWord += Character.toString(character);
-
                 test(currentWordIndex, typedWord);
             }
 //TODO: the count of the typed values
@@ -131,18 +124,11 @@ public class WPM implements KeyListener {
             threadDatas[2] = allTypedCharacterCount;
         }
     }
-
-// Listening methods.
-//    TODO 1-1
     public void keyPressed(KeyEvent e) {
       typingProcess(e);
     }
     public void keyReleased(KeyEvent e) {}
     public void keyTyped(KeyEvent e) {}
-
-
-    //Main test method.
-    //TODO 1-2
     static void countDown() {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -162,33 +148,20 @@ public class WPM implements KeyListener {
             }
         }, 0, 1000);
     }
-
-    //TODO 1-3
     static void test(int currentWordIndex, String typedWord) {
         if(isTestActive){
-            if(typedWord != null || startControl){
+            if(typedWord != null || startControl)
                 startControl = true;
-//                for(int i=3; i < 7; i++){
-//                 System.out.print(String.format("\033[%dA", i));
-//                    System.out.println("something something else");
-//                   System.out.print("\033[2K");
-//                }
-            }
 
             printWords(currentWordIndex, typedWord);
            CalculationThread.x_view.lblTyped.setText("");
            CalculationThread.x_view.lblTyped.setText("\nTyped: " + (typedWord == null ? "" : typedWord));
-
-//            System.out.print("────────────────────────────────────────\n\n");
         }
     }
-
-    //TODO 1 - 4
-    //Word coloring and geting method.
     static void printWords(int currentWordIndex, String typedWord){
-        //New line
         if(currentWordIndex == 0 && typedWord == null){
             lineCounter += WORDCOUNTPERLINE;
+            //TODO: Read the text and insert it in LIST
             words = readWordsFromFile(lineCounter);
 
             words.set(currentWordIndex, cleanAnsiAndSetColor((String) words.get(currentWordIndex), BLUE_BACKGROUND));
@@ -259,7 +232,7 @@ public class WPM implements KeyListener {
     }
 
 
-    
+
 
 
 //static void cleanScreen() {
