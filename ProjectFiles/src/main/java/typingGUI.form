@@ -21,16 +21,6 @@
         </properties>
         <border type="etched"/>
         <children>
-          <component id="88b3f" class="javax.swing.JLabel" binding="labelStatus">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <maximumSize width="70" height="20"/>
-              <minimumSize width="70" height="20"/>
-              <preferredSize width="70" height="20"/>
-            </properties>
-          </component>
           <grid id="132a1" binding="panelCardContent" layout-manager="CardLayout" hgap="0" vgap="0" show="6f632">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -90,30 +80,6 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <scrollpane id="8d05a" binding="scrollPaneExample">
-                        <constraints>
-                          <splitpane position="left"/>
-                        </constraints>
-                        <properties>
-                          <autoscrolls value="true"/>
-                          <horizontalScrollBarPolicy value="30"/>
-                          <verticalScrollBarPolicy value="20"/>
-                        </properties>
-                        <border type="none"/>
-                        <children>
-                          <component id="408d6" class="javax.swing.JTextArea" binding="textAreaExampleText">
-                            <constraints/>
-                            <properties>
-                              <autoscrolls value="true"/>
-                              <editable value="false"/>
-                              <focusable value="false"/>
-                              <lineWrap value="true"/>
-                              <text value=""/>
-                              <wrapStyleWord value="true"/>
-                            </properties>
-                          </component>
-                        </children>
-                      </scrollpane>
                       <scrollpane id="7f745" binding="scrollPaneTyping">
                         <constraints>
                           <splitpane position="right"/>
@@ -127,6 +93,7 @@
                             <constraints/>
                             <properties>
                               <autoscrolls value="true"/>
+                              <editable value="false"/>
                               <lineWrap value="true"/>
                               <requestFocusEnabled value="true"/>
                               <text value=""/>
@@ -135,6 +102,20 @@
                           </component>
                         </children>
                       </scrollpane>
+                      <component id="7a17b" class="javax.swing.JLabel" binding="lblwrite">
+                        <constraints>
+                          <splitpane position="left"/>
+                        </constraints>
+                        <properties>
+                          <background color="-16777216"/>
+                          <font swing-font="DesktopIcon.font"/>
+                          <foreground color="-327424"/>
+                          <horizontalAlignment value="0"/>
+                          <horizontalTextPosition value="0"/>
+                          <labelFor value="23f36"/>
+                          <text value="have fun &gt;&gt;"/>
+                        </properties>
+                      </component>
                     </children>
                   </splitpane>
                   <component id="ac894" class="javax.swing.JLabel" binding="labelYou">
@@ -150,7 +131,7 @@
                   </component>
                   <component id="632e5" class="javax.swing.JProgressBar" binding="progressBarYou">
                     <constraints>
-                      <grid row="4" column="4" row-span="1" col-span="13" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="3" row-span="1" col-span="14" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                       <forms defaultalign-horz="false" defaultalign-vert="false"/>
                     </constraints>
                     <properties>
@@ -275,7 +256,7 @@
           </grid>
           <component id="d38e8" class="javax.swing.JLabel" binding="labelNotice">
             <constraints>
-              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font name="Fira Code" size="16" style="1"/>
@@ -290,7 +271,7 @@
             <properties>
               <font name="Fira Code" size="16" style="1"/>
               <foreground color="-16777216"/>
-              <text value="typed"/>
+              <text value="typed : "/>
             </properties>
           </component>
         </children>

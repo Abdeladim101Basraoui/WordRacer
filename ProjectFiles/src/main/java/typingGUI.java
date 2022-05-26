@@ -7,13 +7,10 @@ import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Highlighter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class typingGUI extends Component{
     public JSplitPane splitterWorking;
-    public JScrollPane scrollPaneExample;
-    public JTextArea textAreaExampleText;
     public JScrollPane scrollPaneTyping;
     public JTextArea textAreaTyping;
     public JLabel labelYou;
@@ -29,13 +26,13 @@ public class typingGUI extends Component{
     public JLabel labelHeaderWordTypos;
     public JLabel labelWPM;
     public JButton buttonCancelTest;
-    public JLabel labelStatus;
     public JPanel panelCardContent;
     public JPanel panelWorkingContent;
     //TODO: used to take the top lvl prop
     public  JPanel panelTopLevel;
     public JLabel labelNotice;
     public JLabel lblTyped;
+    private JLabel lblwrite;
     //
 
     private static final Object ABORT_KEY = new Object();
@@ -50,18 +47,27 @@ public class typingGUI extends Component{
 //        });
 //    }
 
+    public typingGUI() {
+        textAreaTyping.addKeyListener(new KeyAdapter() {
+
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                WPM.typingProcess(e);
+            }
+
+        });
+    }
+
     public void initApp() {
         // Actions
         panelWorkingContent.getActionMap().put(ABORT_KEY, new ActionAbort());
-
         progressBarYou.setMaximum(100);
         progressBarYou.setMinimum(0);
         progressBarYou.setStringPainted(true);
-
     }
 
     public static class ActionAbort extends AbstractAction {
-
         @Override
         public void actionPerformed(ActionEvent e) {
             Object[] options = {"OK","Cancel"};
@@ -71,7 +77,5 @@ public class typingGUI extends Component{
                     JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         }
     }
-
-
 
 }
