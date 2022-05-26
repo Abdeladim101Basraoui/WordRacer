@@ -5,6 +5,7 @@
 //import java.awt.color;
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
 import java.awt.*;
 import java.awt.event.*;
@@ -57,8 +58,65 @@ public class typingGUI extends Component{
             }
 
         });
-    }
 
+
+        textAreaTyping.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyChar() == KeyEvent.VK_ENTER)
+                {}
+                String highlightThis;
+
+                if( Character.isLetter(e.getKeyChar()) || Character.isDigit(e.getKeyChar())){
+                    highlightThis = WPM.typedWord ;//+ Character.toString(e.getKeyChar());
+                }
+                // Ignore all characters that are not letters or numbers
+                else{
+                    highlightThis = WPM.typedWord;
+                }
+                highlightMatches(highlightThis);
+            }
+        });
+    }
+    public void highlightMatches(String highlightThis){
+        // Try to highlight matches of keyword search
+        try {
+
+            String text = textAreaTyping.getText();
+            // Initialize our cyan highlighter object
+            Highlighter.HighlightPainter painter = new DefaultHighlighter.DefaultHighlightPainter(Color.cyan);
+
+            // If text exists and there is something to highlight...
+            if(WPM.typedWord!=null || highlightThis!=null) {
+                if (!WPM.typedWord.equals("") || !highlightThis.equals("")) {
+                    // Where do we begin the highlight?
+                    int offset = text.indexOf(highlightThis);
+                    // How far does the highlight go?
+                    int length = highlightThis.length();
+                    // Since the search string has changed, remove old highlights
+                    textAreaTyping.getHighlighter().removeAllHighlights();
+                    // For all instances where we can highlight
+//                    while (offset != -1) {
+                        // Highlight from beginning to end with cyan
+                        textAreaTyping.getHighlighter().addHighlight(offset, offset + length, painter);
+                        // Get the next instance
+                        offset = text.indexOf(highlightThis, offset + 1);
+//                    }
+//                // After highlights done, update count of highlights
+//                occuranceText.setText("Number of Occurences: " +
+//                        new JTextArea().getHighlighter().getHighlights().length);
+                }
+            }
+            // If there is nothing in the text field, remove highlights & reset count
+            else{
+                textAreaTyping.getHighlighter().removeAllHighlights();
+//                occuranceText.setText("Number of Occurences: 0");
+            }
+            // Unless the location of a highlight is invalid
+        } catch (BadLocationException ex) {
+            System.out.append(ex.toString());
+        }
+    }
     public void initApp() {
         // Actions
         panelWorkingContent.getActionMap().put(ABORT_KEY, new ActionAbort());

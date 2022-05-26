@@ -153,7 +153,7 @@ public class WPM implements KeyListener {
             if(typedWord != null || startControl)
                 startControl = true;
 
-            printWords(currentWordIndex, typedWord);
+           printWords(currentWordIndex, typedWord);
            CalculationThread.x_view.lblTyped.setText("");
            CalculationThread.x_view.lblTyped.setText("\nTyped: " + (typedWord == null ? "" : typedWord));
         }
@@ -164,7 +164,8 @@ public class WPM implements KeyListener {
             //TODO: Read the text and insert it in LIST
             words = readWordsFromFile(lineCounter);
 
-            words.set(currentWordIndex, cleanAnsiAndSetColor((String) words.get(currentWordIndex), BLUE_BACKGROUND));
+            //words.set(currentWordIndex, cleanAnsiAndSetColor((String) words.get(currentWordIndex), BLUE_BACKGROUND));
+           // CalculationThread.x_view.textAreaTyping
         }
         //Same line
         else {
@@ -356,4 +357,3 @@ public class WPM implements KeyListener {
      * END
      */
 }
-

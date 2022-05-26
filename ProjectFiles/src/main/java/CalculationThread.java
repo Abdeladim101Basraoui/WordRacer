@@ -71,4 +71,16 @@ class CalculationThread extends Thread{
 //            System.out.println("\nPress \"Enter\" for restart.");
             x_view.labelNotice.setText("Press \"Enter\" for restart.");
     }
+
+
+  public boolean AddToDB()
+  {
+   try {
+       return false;
+   }catch (Exception ex)
+   {
+       System.out.println(ex.getMessage());
+   }
+      return true;
+  }
 }
