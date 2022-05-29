@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337a321d-50b6-4b8f-bc67-d5dc3b3e36e4" name="Changes" comment="" />
+    <list default="true" id="337a321d-50b6-4b8f-bc67-d5dc3b3e36e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/CalculationThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/WPM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/CalculationThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/ddd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/highlightshit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WordRacer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WordRacer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/CalculationThread$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/CalculationThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/WPM$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/WPM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/highlightshit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$ActionAbort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,11 +60,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ProjectFiles/src/main/java/CalculationThread.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,16 +72,64 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="62" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="138" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="337" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CheckersAI" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/database/ojdbc11.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\Game" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\game" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\lvlpackages" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MatchingFrame">
+    <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.JDBC" />
+      <module name="WordRacer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBC1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.JDBC1" />
+      <module name="WordRacer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatchingFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lvlpackages.MatchingFrame" />
+      <module name="WordRacer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lvlpackages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WPM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WPM" />
       <module name="WordRacer" />
@@ -59,8 +137,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WPM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game.WPM" />
+      <module name="WordRacer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MatchingFrame" />
+        <item itemvalue="Application.JDBC" />
+        <item itemvalue="Application.JDBC1" />
         <item itemvalue="Application.WPM" />
       </list>
     </recent_temporary>
@@ -76,47 +170,68 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
-          <line>155</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java</url>
-          <line>166</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.java</url>
-          <line>80</line>
-          <properties class="typingGUI" method="highlightMatches">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
+          <line>72</line>
+          <properties class="Game.JDBC" method="BestSCoreByLvl">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
+          <line>13</line>
+          <properties class="Game.JDBC" method="InsertValues">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java" line="24">
+        <watch expression="BestSCoreByLvl" />
+      </inline-watch>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/WordRacer$MatchingFrame.ic" NAME="MatchingFrame Coverage Results" MODIFIED="1653608878214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>lvlpackages.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/WordRacer$WPM.ic" NAME="WPM Coverage Results" MODIFIED="1653575926430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/WordRacer$JDBC.ic" NAME="JDBC Coverage Results" MODIFIED="1653773421994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Game.*</FILTER>
+    </SUITE>
   </component>
 </project>

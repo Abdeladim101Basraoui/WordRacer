@@ -1,3 +1,4 @@
+package Game;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -33,7 +34,7 @@ class CalculationThread extends Thread{
                     thread.interrupt();
                     cleanVariablesAndShowResultScreen(false);
                 }else
-                x_view.labelTimePassed.setText(String.valueOf(WPM.duration)+"s");
+                    x_view.labelTimePassed.setText(String.valueOf(WPM.duration)+"s");
                 x_view.labelCharsTyped.setText(String.valueOf(aCC));
                 x_view.labelWPM.setText(String.valueOf(netWPM));
                 x_view.labelcorrect.setText(String.valueOf(cCC));
@@ -67,20 +68,18 @@ class CalculationThread extends Thread{
         System.out.println("─────────");
         System.out.println("All entrys: " + aCC + " | Correct: " + WPM.cleanAnsiAndSetColor(String.valueOf(cCC), WPM.GREEN) + " | Wrong: " + WPM.cleanAnsiAndSetColor(String.valueOf(wCC), WPM.RED));
 
+        //add to DB
+        //TODO change value of id
+        JDBC.InsertValues(CalculationThread.x_view.getLvl(),netWPM,cCC,wCC,aCC, (int)accuracy,7);
+
+
         if(!isEndOfWords)
-//            System.out.println("\nPress \"Enter\" for restart.");
             x_view.labelNotice.setText("Press \"Enter\" for restart.");
+
+
+
     }
 
 
-  public boolean AddToDB()
-  {
-   try {
-       return false;
-   }catch (Exception ex)
-   {
-       System.out.println(ex.getMessage());
-   }
-      return true;
-  }
+
 }

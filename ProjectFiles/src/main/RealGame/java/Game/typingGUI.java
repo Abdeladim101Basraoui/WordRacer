@@ -1,16 +1,15 @@
-//import javax.swing.text.Highlighter;
-//import javax.swing.text.DefaultHighlighter;
-//import javax.swing.text.DefaultHighlighter.DefaultHighlightPainter;
-//import javax .swing.text.BadLocationException;
-//import java.awt.color;
+package Game;
+import lvlpackages.MatchingFrame;
+
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.logging.Logger;
 
-public class typingGUI extends Component{
+public class typingGUI extends JFrame{
     public JSplitPane splitterWorking;
     public JScrollPane scrollPaneTyping;
     public JTextArea textAreaTyping;
@@ -34,19 +33,20 @@ public class typingGUI extends Component{
     public JLabel labelNotice;
     public JLabel lblTyped;
     private JLabel lblwrite;
+    public  JLabel lblSQLStatus;
     //
+    public int lvl;
+    public  int getLvl() {
+        return lvl;
+    }
+    public  void setLvl(int lvl) {
+this.lvl = lvl;
+
+
+    }
 
     private static final Object ABORT_KEY = new Object();
 
-//    public typingGUI() {
-//
-//        buttonCancelTest.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//
-//            }
-//        });
-//    }
 
     public typingGUI() {
         textAreaTyping.addKeyListener(new KeyAdapter() {
@@ -59,14 +59,11 @@ public class typingGUI extends Component{
 
         });
 
-
         textAreaTyping.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() == KeyEvent.VK_ENTER)
-                {}
+                if (e.getKeyChar() == KeyEvent.VK_ENTER) {}
                 String highlightThis;
-
                 if( Character.isLetter(e.getKeyChar()) || Character.isDigit(e.getKeyChar())){
                     highlightThis = WPM.typedWord ;//+ Character.toString(e.getKeyChar());
                 }
@@ -77,7 +74,21 @@ public class typingGUI extends Component{
                 highlightMatches(highlightThis);
             }
         });
+
+
+
+        buttonCancelTest.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MatchingFrame fm=new MatchingFrame();
+                    fm.setVisible(true);
+                    WPM.x_frame.dispose();
+            }
+        });
     }
+
+
+
     public void highlightMatches(String highlightThis){
         // Try to highlight matches of keyword search
         try {
@@ -97,10 +108,10 @@ public class typingGUI extends Component{
                     textAreaTyping.getHighlighter().removeAllHighlights();
                     // For all instances where we can highlight
 //                    while (offset != -1) {
-                        // Highlight from beginning to end with cyan
-                        textAreaTyping.getHighlighter().addHighlight(offset, offset + length, painter);
-                        // Get the next instance
-                        offset = text.indexOf(highlightThis, offset + 1);
+                    // Highlight from beginning to end with cyan
+                    textAreaTyping.getHighlighter().addHighlight(offset, offset + length, painter);
+                    // Get the next instance
+                    offset = text.indexOf(highlightThis, offset + 1);
 //                    }
 //                // After highlights done, update count of highlights
 //                occuranceText.setText("Number of Occurences: " +
