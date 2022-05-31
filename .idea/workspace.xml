@@ -1,41 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="WordRacer:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="337a321d-50b6-4b8f-bc67-d5dc3b3e36e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/CalculationThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/WPM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Badr/AdminLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Badr/CHOICE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Badr/DashBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Badr/Rank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/1442945289_wpm-key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/1442945289_wpm-key_auto_x2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/31504.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/702ecfb19ab72457494f59d2ca4f599a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/Screenshot 2022-04-03 081816.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/free-keyboard-icon-1425-thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/generic-avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/icon-programmer-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/istockphoto-892302012-170667a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/neww.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/original.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/photo-1491947153227-33d59da6c448.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/photo-1541140532154-b024d705b90a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/rsz_112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/screen-0_auto_x2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Image/w-key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Inscri.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/elasri/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/CalculationThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/WPM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/ddd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/highlightshit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/java/typingGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/CalculationThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/CalculationThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/JDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/WPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/WPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl3" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl4" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl5" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/lvl9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/lvl9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/typingGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/typingGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/lvlpackages/MatchingFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/lvlpackages/MatchingFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFiles/src/RealGame/lvlpackages/MatchingModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WordRacer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WordRacer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/CalculationThread$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/CalculationThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/WPM$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/WPM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/highlightshit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI$ActionAbort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/typingGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/CalculationThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/CalculationThread$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/CalculationThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/CalculationThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/JDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/JDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/WPM$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/WPM$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/WPM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/WPM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$ActionAbort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI$ActionAbort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/Game/typingGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/lvlpackages/MatchingFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/lvlpackages/MatchingFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WordRacer/lvlpackages/MatchingFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WordRacer/lvlpackages/MatchingFrame.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +100,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="29h3SUUArfblabcLeWSyEVj4LcZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -75,28 +115,33 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="138" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="337" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/database/ojdbc11.jar" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/elasri-Badr" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\elasri-Badr" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\Game" />
-      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java" />
-      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\game" />
-      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\lvlpackages" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\RealGame\Badr\Images" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src" />
       <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main" />
+      <recent name="C:\Users\abdom\Desktop\JAVA projects\WordRacer\ProjectFiles\src\main\RealGame\java\Game" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MatchingFrame">
-    <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Game.JDBC" />
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="HomePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="elasri.HomePage" />
       <module name="WordRacer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Game.*" />
+          <option name="PATTERN" value="elasri.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +149,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDBC1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Game.JDBC1" />
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="elasri.Login" />
       <module name="WordRacer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Game.*" />
+          <option name="PATTERN" value="elasri.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +162,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatchingFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lvlpackages.MatchingFrame" />
+    <configuration name="Profile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="elasri.Profile" />
       <module name="WordRacer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lvlpackages.*" />
+          <option name="PATTERN" value="elasri.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,19 +175,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WPM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WPM" />
+    <configuration name="Rank" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Badr.Rank" />
       <module name="WordRacer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Badr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WPM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Game.WPM" />
+    <configuration name="Ranking" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="elasri.Ranking" />
       <module name="WordRacer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Game.*" />
+          <option name="PATTERN" value="elasri.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,10 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MatchingFrame" />
-        <item itemvalue="Application.JDBC" />
-        <item itemvalue="Application.JDBC1" />
-        <item itemvalue="Application.WPM" />
+        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.Ranking" />
+        <item itemvalue="Application.HomePage" />
+        <item itemvalue="Application.Profile" />
+        <item itemvalue="Application.Rank" />
       </list>
     </recent_temporary>
   </component>
@@ -185,48 +237,45 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/typingGUI.java</url>
-          <line>132</line>
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/typingGUI.java</url>
+          <line>133</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/lvlpackages/MatchingFrame.java</url>
-          <line>99</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/lvlpackages/MatchingFrame.java</url>
+          <line>100</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/WPM.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Badr/AdminLogin.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/JDBC.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
-          <line>72</line>
-          <properties class="Game.JDBC" method="BestSCoreByLvl">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java</url>
-          <line>13</line>
-          <properties class="Game.JDBC" method="InsertValues">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/JDBC.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/ProjectFiles/src/main/RealGame/java/Game/JDBC.java" line="24">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/ProjectFiles/src/RealGame/Game/JDBC.java" line="33">
         <watch expression="BestSCoreByLvl" />
       </inline-watch>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WordRacer$MatchingFrame.ic" NAME="MatchingFrame Coverage Results" MODIFIED="1653608878214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/WordRacer$MatchingFrame.ic" NAME="MatchingFrame Coverage Results" MODIFIED="1653809950509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>lvlpackages.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/WordRacer$WPM.ic" NAME="WPM Coverage Results" MODIFIED="1653575926430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

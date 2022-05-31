@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WordRacer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WordRacer_jar</output-path>
+    <root id="archive" name="WordRacer.jar">
+      <element id="module-output" name="WordRacer" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/database/ojdbc11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jgoodies comm 1.8.0/common/jgoodies-forms-1.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jgoodies comm 1.8.0/common/jgoodies-common-1.8.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

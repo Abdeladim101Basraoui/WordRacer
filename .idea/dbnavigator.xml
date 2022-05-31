@@ -29,9 +29,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="38e093a2-4a25-44a1-a2cf-d08624a3a30c">
-      <console name="WordRacer" type="STANDARD" schema="SYS" session="Main"><![CDATA[select * from sys.RACE
+      <console name="WordRacer" type="STANDARD" schema="SYSTEM" session="Main"><![CDATA[select * from RACE
 
-select * from PLAYER
+select * from system.PLAYER
 
 select bestscore from race where ID_Player =1
 
@@ -53,7 +53,66 @@ select max(BESTSCORE) "BestByLevel",ID_PLAYER,"level" from sys.race where  ID_PL
 
 
 
-select * from race where ID_PLAYER = 1]]></console>
+select * from race where ID_PLAYER = 1
+
+INSERT INTO sys.PLAYER (P_Name, AGE, EMAIL, PWD, USERNAME) VALUES ('rr', 8,'"+Mail+"','"+Pass+"','qq')
+
+
+
+SELECT p.P_Name, r.BestScore, p.Email, p.Username FROM sys.Player p 
+INNER JOIN sys.Race r on p.IDPlayer = r.ID_Race ORDER BY r.BestScore DESC
+
+select p.IDPlayer, p.P_Name, r.WPM, r."level", r.BestScore, p.Image from sys.Player p
+ INNER JOIN sys.Race r on p.IDPlayer = r.ID_Race order by p.IDPlayer asc
+
+
+
+
+
+select p.IDPlayer, p.P_Name, r.WPM, r."level", r.BestScore, p.Image from sys.Player p INNER JOIN sys.Race r on p.IDPlayer = r.ID_PLAYER order by p.IDPlayer asc
+
+alter table system.race add constraint FK_Player foreign key (ID_Player) references system.player (IDPlayer)
+
+select * from system.RACE
+
+select * from system.PLAYER
+
+
+
+
+insert into system.race ("level",wpm,bestscore,correctwords,wrongwords,totalwords,accuracy,id_player) values(1 ,
+                    80 ,
+                    80 ,
+                    80 ,
+                    80 ,
+                    160 ,
+                    40 ,
+                    1 )
+
+
+
+alter table player drop constraint FK_PLAYER
+select * from "SYSTEM".race
+
+
+select p.IDPlayer, p.P_Name, r.WPM, r."level", r.BestScore, p.Image from system.Player p
+ INNER JOIN system.Race r on p.IDPlayer = r.ID_PLAYER order by p.IDPlayer asc";
+
+
+
+
+
+select P_Name, BestScore, Username from system.player p 
+inner join system.race r on 
+p.IDPlayer = r.ID_Player where r.bestscore is not null ORDER BY r.bestScore desc
+
+select * from system.PLAYER
+
+select count(*) from system.player p inner join system.race r on p.IDPlayer
+ = r.ID_Player where r.bestscore > ( select max(r.bestscore) from system.player 
+ p inner join system.race r on p.IDPlayer = r.ID_Player where p.username = 'qwerty') 
+ order by r.bestscore desc;
+\]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -63,6 +122,8 @@ select * from race where ID_PLAYER = 1]]></console>
     <connection id="38e093a2-4a25-44a1-a2cf-d08624a3a30c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="38e093a2-4a25-44a1-a2cf-d08624a3a30c" dataset="SYSTEM.PLAYER" active-filter-id="" />
+    <filter-actions connection-id="38e093a2-4a25-44a1-a2cf-d08624a3a30c" dataset="SYS.PLAYER" active-filter-id="" />
     <filter-actions connection-id="38e093a2-4a25-44a1-a2cf-d08624a3a30c" dataset="SYS.RACE" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
