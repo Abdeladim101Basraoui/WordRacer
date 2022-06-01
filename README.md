@@ -14,27 +14,24 @@ Is a measure of words processed in a minute, often used as a measurement of the 
 
 ## Usage
 ### Run Project
-- Locate ```WPMCalculator``` folder any terminal (e.g. Powershell, Comand Prompt).
-- ⚠️ Must be ```words.txt``` and ```RealTimeWPMCalculator.jar``` same location.
-- Run comand: ```java -jar .\RealTimeWPMCalculator.jar```
+the project in the step before the release so pleae execute it from the IDE e.g (Intellij)
 
 ### Customizing Test Words
-- Change words in ```words.txt``` and save.
+- ### change the level by doing this the text is changing for new experience
+- <img src="./images/levels.png"/>
 
 ## Fetures
 - Real time gross WPM, net WPM and accuracy calculation.
 - Test words customization.
 - Word count customization per line.
+- save into database
+-  administrator access to the app
+- creation of a dynamic dashboard to display the users ranking and result
+
 
 ## Screenshots
 ### Start Screen
-<img src="./images/1.png"/>
-
-### Test Screen
-<img src="./images/2.png"/>
-
-### Result Screen
-<img src="./images/3.png"/>
+<media src ="./images/VID-20220601-WA0001.mp4"/>
 
 ## License
 MIT
