@@ -31,7 +31,7 @@ the project in the step before the release so pleae execute it from the IDE e.g 
 
 ## Screenshots
 ### Start Screen
-<video width="320" height="240" controls>
+<video controls>
 <source src ="./images/VID-20220601-WA0001.mp4"/ type="video/mp4">
 </video>
 ## License
